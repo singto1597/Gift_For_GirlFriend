@@ -33,13 +33,30 @@ body {
 .birthday-text {
   font-family: 'Caveat', cursive;
   font-size: 3.5rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 2), 0 0 20px rgba(255, 255, 255, 1);
   color: var(--accent-color);
   animation: popIn 1.2s ease-out forwards;
 }
 
 @keyframes popIn {
-  0% { transform: scale(0); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+
 }
 
 #main {
@@ -82,7 +99,8 @@ header h2 {
 }
 
 .slide img {
-  max-width: 100%;
+  max-width: 200px;
+  max-height: 200px;
   border-radius: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -93,17 +111,30 @@ header h2 {
 }
 
 .message p {
-  font-family: 'Caveat', cursive;
+  font-family: 'Itim', cursive;
   font-size: 1.8rem;
   max-width: 90%;
   margin: 0 auto;
   background: white;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
+  margin-top: 2rem;
+  line-height: 1.5;
+
 }
 
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+/* Particles Background */
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
