@@ -99,8 +99,8 @@ header h2 {
 }
 
 .slide img {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 400px;
+  max-height: 400px;
   border-radius: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -137,4 +137,74 @@ header h2 {
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+.cake-container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cake {
+  position: relative;
+  width: 120px;
+  height: 180px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.layer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background: #f5c9f0;
+  
+}
+
+.layer-bottom {
+  bottom: 0;
+  background: #d6a2e8;
+}
+
+.layer-middle {
+  bottom: 30px;
+  width: 80px;
+  background: #f3b2f2;
+}
+
+.layer-top {
+  bottom: 60px;
+  width: 60px;
+  background: #fdd0f6;
+}
+
+.candle {
+  position: absolute;
+  bottom: 98px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 30px;
+  background: #ff69b4;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.flame {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: gold;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 4px rgba(255, 215, 0, 0.6);
+  animation: flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { transform: translateX(-50%) scale(1); opacity: 1; }
+  100% { transform: translateX(-50%) scale(1.2); opacity: 0.8; }
 }
