@@ -208,3 +208,24 @@ header h2 {
   0% { transform: translateX(-50%) scale(1); opacity: 1; }
   100% { transform: translateX(-50%) scale(1.2); opacity: 0.8; }
 }
+/* Style for Countdown Timer */
+.countdown-container {
+  background-color: #ffe1fc;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.countdown-container h2 {
+  font-size: 2em;
+  color: #b74cff; /* สีตัวอักษรหัวข้อ */
+  margin-bottom: 20px;
+}
+
+#countdown {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #b74cff; /* สีตัวอักษรตัวเลข */
+}
